@@ -407,14 +407,15 @@ elif sys.argv[1] == '-i':
 						kbdss.append(kbds1+kbds2+kbds3)
 	
 	# string combinations....
-	kombinaac = [pet, petup, company, companyup]
+	kombinaac = [pet, petup, company, companyup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
-	kombina = [name, surname, nick, nameup, surnameup, nickup]
+	kombina = [name, surname, nick, nameup, surnameup, nickup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
-	kombinaw = [wife, wifen, wifeup, wifenup, surname, surnameup]
+	kombinaw = [wife, wifen, wifeup, wifenup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
-	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup]
-	
+	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
+
+
 	kombinaa = []
 	for kombina1 in kombina:
 		kombinaa.append(kombina1)
