@@ -373,9 +373,7 @@ elif sys.argv[1] == '-i':
 				for bds3 in bds:
 					if bds.index(bds1) != bds.index(bds2) and bds.index(bds2) != bds.index(bds3) and bds.index(bds1) != bds.index(bds3):
 						bdss.append(bds1+bds2+bds3)
-	
-	
-	
+							
 	# For a woman...
 	wbds = [wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm]
 	
@@ -415,14 +413,20 @@ elif sys.argv[1] == '-i':
 	
 	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 
-
+	kombinaaac = []
+	for kombina1 in kombinaac:
+		kombinaaac.append(kombina1)
+                for kombina2 in kombinaac:
+                        if kombinaac.index(kombina1) != kombinaac.index(kombina2) and kombinaac.index(kombina1.title()) != kombinaac.index(kombina2.title()):
+                                kombinaaac.append(kombina1+kombina2)
+	
 	kombinaa = []
 	for kombina1 in kombina:
 		kombinaa.append(kombina1)
 		for kombina2 in kombina:
 			if kombina.index(kombina1) != kombina.index(kombina2) and kombina.index(kombina1.title()) != kombina.index(kombina2.title()):
 				kombinaa.append(kombina1+kombina2)
-	
+
 	kombinaaw = []
 	for kombina1 in kombinaw:
 		kombinaaw.append(kombina1)
@@ -440,12 +444,26 @@ elif sys.argv[1] == '-i':
 	
 	
 	komb1 = list(komb(kombinaa, bdss))
+	komb111 = list(komb(kombinaa, wbdss))
+	komb112 = list(komb(kombinaa, kbdss))
+
 	komb2 = list(komb(kombinaaw, wbdss))
+	komb211 = list(komb(kombinaaw, bdss))
+	komb212 = list(komb(kombinaaw, kbdss))
+
 	komb3 = list(komb(kombinaak, kbdss))
+	komb311 = list(komb(kombinaak, bdss))
+	komb312 = list(komb(kombinaak, wbdss))	
+
+	komb511 = list(komb(kombinaaac, bdss))
+	komb512 = list(komb(kombinaaac, wbdss))
+	komb513 = list(komb(kombinaaac, kbdss))
+
 	komb4 = list(komb(kombinaa, years))
-	komb5 = list(komb(kombinaac, years))
+	komb5 = list(komb(kombinaaac, years))
 	komb6 = list(komb(kombinaaw, years))
 	komb7 = list(komb(kombinaak, years))
+
 	komb8 = list(komb(word, bdss))
 	komb9 = list(komb(word, wbdss))
 	komb10 = list(komb(word, kbdss))
@@ -459,7 +477,7 @@ elif sys.argv[1] == '-i':
 	if randnum == "y":
 		komb12 = list(concats(word, numfrom, numto))
 		komb13 = list(concats(kombinaa, numfrom, numto))
-		komb14 = list(concats(kombinaac, numfrom, numto))
+		komb14 = list(concats(kombinaaac, numfrom, numto))
 		komb15 = list(concats(kombinaaw, numfrom, numto))
 		komb16 = list(concats(kombinaak, numfrom, numto))
 		komb21 = list(concats(reverse, numfrom, numto))
@@ -475,7 +493,7 @@ elif sys.argv[1] == '-i':
 	komb006 = ['']
 	if spechars1 == "y":
 		komb001 = list(komb(kombinaa, spechars))
-		komb002 = list(komb(kombinaac, spechars))
+		komb002 = list(komb(kombinaaac, spechars))
 		komb003 = list(komb(kombinaaw , spechars))
 		komb004 = list(komb(kombinaak , spechars))
 		komb005 = list(komb(word, spechars))
@@ -484,10 +502,23 @@ elif sys.argv[1] == '-i':
 	print "[+] Sorting list and removing duplicates..."
 	
 	komb_unique1 = dict.fromkeys(komb1).keys()
+	komb_unique111 = dict.fromkeys(komb111).keys()
+	komb_unique112 = dict.fromkeys(komb112).keys()
+
 	komb_unique2 = dict.fromkeys(komb2).keys()
+	komb_unique211 = dict.fromkeys(komb211).keys()
+	komb_unique212 = dict.fromkeys(komb212).keys()
+
 	komb_unique3 = dict.fromkeys(komb3).keys()
+	komb_unique311 = dict.fromkeys(komb311).keys()
+	komb_unique312 = dict.fromkeys(komb312).keys()
+
 	komb_unique4 = dict.fromkeys(komb4).keys()
 	komb_unique5 = dict.fromkeys(komb5).keys()
+	komb_unique511 = dict.fromkeys(komb511).keys()
+	komb_unique512 = dict.fromkeys(komb512).keys()
+	komb_unique513 = dict.fromkeys(komb513).keys()
+
 	komb_unique6 = dict.fromkeys(komb6).keys()
 	komb_unique7 = dict.fromkeys(komb7).keys()
 	komb_unique8 = dict.fromkeys(komb8).keys()
@@ -516,7 +547,7 @@ elif sys.argv[1] == '-i':
 	komb_unique011 = dict.fromkeys(komb005).keys()
 	komb_unique012 = dict.fromkeys(komb006).keys()
 	
-	uniqlist = bdss+wbdss+kbdss+reverse+komb_unique01+komb_unique02+komb_unique03+komb_unique04+komb_unique05+komb_unique1+komb_unique2+komb_unique3+komb_unique4+komb_unique5+komb_unique6+komb_unique7+komb_unique8+komb_unique9+komb_unique10+komb_unique11+komb_unique12+komb_unique13+komb_unique14+komb_unique15+komb_unique16+komb_unique17+komb_unique18+komb_unique19+komb_unique20+komb_unique21+komb_unique07+komb_unique08+komb_unique09+komb_unique010+komb_unique011+komb_unique012
+	uniqlist = bdss+wbdss+kbdss+reverse+komb_unique01+komb_unique02+komb_unique03+komb_unique04+komb_unique05+komb_unique1+komb_unique111+komb_unique112+komb_unique2+komb_unique211+komb_unique212+komb_unique3+komb_unique4+komb_unique5+komb_unique511+komb_unique512+komb_unique513+komb_unique6+komb_unique7+komb_unique8+komb_unique9+komb_unique10+komb_unique11+komb_unique12+komb_unique13+komb_unique14+komb_unique15+komb_unique16+komb_unique17+komb_unique18+komb_unique19+komb_unique20+komb_unique21+komb_unique07+komb_unique08+komb_unique09+komb_unique010+komb_unique011+komb_unique012
 	
 	unique_lista = dict.fromkeys(uniqlist).keys()
 	unique_leet = []
