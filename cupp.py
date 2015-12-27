@@ -282,7 +282,7 @@ elif sys.argv[1] == '-i':
 	words = ['']
 	oth = raw_input("> Do you want to add some key words about the victim? Y/[N]: ").lower()
 	if oth == "y":
-		words = raw_input("> Please enter the words, separated by comma. [i.e. hacker, juice, black]: ").split(", ").lower()
+		words = raw_input("> Please enter the words, separated by comma. [i.e. hacker, juice, black]: ").split(", ")
 
 	spechars = ['']
 	spechars1 = raw_input("> Do you want to add special chars at the end of words? Y/[N]: ").lower()
