@@ -376,9 +376,15 @@ elif sys.argv[1] == '-i':
 		for bds2 in bds:
 			if bds.index(bds1) != bds.index(bds2):
 				bdss.append(bds1+bds2)
+				bdss.append(bds2+bds1)
 				for bds3 in bds:
 					if bds.index(bds1) != bds.index(bds2) and bds.index(bds2) != bds.index(bds3) and bds.index(bds1) != bds.index(bds3):
 						bdss.append(bds1+bds2+bds3)
+						bdss.append(bds1+bds3+bds2)
+						bdss.append(bds2+bds1+bds3)
+						bdss.append(bds2+bds3+bds1)
+						bdss.append(bds3+bds1+bds2)
+						bdss.append(bds3+bds2+bds1)
 							
 	# For a woman...
 	wbds = [wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm]
@@ -394,9 +400,15 @@ elif sys.argv[1] == '-i':
 		for wbds2 in wbds:
 			if wbds.index(wbds1) != wbds.index(wbds2):
 				wbdss.append(wbds1+wbds2)
+				wbdss.append(wbds2+wbds1)
 				for wbds3 in wbds:
 					if wbds.index(wbds1) != wbds.index(wbds2) and wbds.index(wbds2) != wbds.index(wbds3) and wbds.index(wbds1) != wbds.index(wbds3):
 						wbdss.append(wbds1+wbds2+wbds3)
+						wbdss.append(wbds1+wbds3+wbds2)
+						wbdss.append(wbds2+wbds1+wbds3)
+						wbdss.append(wbds2+wbds3+wbds1)
+						wbdss.append(wbds3+wbds1+wbds2)
+						wbdss.append(wbds3+wbds2+wbds1)
 	
 	
 	
@@ -414,18 +426,21 @@ elif sys.argv[1] == '-i':
 		for kbds2 in kbds:
 			if kbds.index(kbds1) != kbds.index(kbds2):
 				kbdss.append(kbds1+kbds2)
+				kbdss.append(kbds2+kbds1)
 				for kbds3 in kbds:
 					if kbds.index(kbds1) != kbds.index(kbds2) and kbds.index(kbds2) != kbds.index(kbds3) and kbds.index(kbds1) != kbds.index(kbds3):
 						kbdss.append(kbds1+kbds2+kbds3)
+						kbdss.append(kbds1+kbds3+kbds2)
+						kbdss.append(kbds2+kbds1+kbds3)
+						kbdss.append(kbds2+kbds3+kbds1)
+						kbdss.append(kbds3+kbds1+kbds2)
+						kbdss.append(kbds3+kbds2+kbds1)
 	
 	# string combinations....
 	kombinaac = [pet, petup, company, companyup]
-	
-	kombina = [name, surname, nick, nameup, surnameup, nickup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
-
-	kombinaw = [wife, wifen, wifeup, wifenup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
-	
-	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
+	kombina = [name, surname, nick, nameup, surnameup, nickup]
+	kombinaw = [wife, wifen, wifeup, wifenup, surname, surnameup]
+	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup]
 
 	kombinaaac = []
 	for kombina1 in kombinaac:
