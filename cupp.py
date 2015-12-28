@@ -477,7 +477,9 @@ elif sys.argv[1] == '-i':
 			if kombinak.index(kombina1) != kombinak.index(kombina2) and kombinak.index(kombina1.title()) != kombinak.index(kombina2.title()):
 				kombinaak.append(kombina1+kombina2)
 				kombinaak.append(kombina2+kombina1)
-				
+		
+	print "\r\n[+] Now combining main person..."
+	
 	komb1 = list(komb(kombinaa, bdss))
 	komb111 = list(komb(kombinaa, wbdss))
 	komb112 = list(komb(kombinaa, kbdss))
@@ -485,12 +487,16 @@ elif sys.argv[1] == '-i':
 	komb114 = list(komb(komb111, spechars))
 	komb115 = list(komb(komb112, spechars))
 
+	print "\r\n[+] Now combining 2nd person..."
+	
 	komb2 = list(komb(kombinaaw, wbdss))
 	komb211 = list(komb(kombinaaw, bdss))
 	komb212 = list(komb(kombinaaw, kbdss))
 	komb213 = list(komb(komb2, kbdss))
 	komb214 = list(komb(komb211, spechars))
 	komb215 = list(komb(komb212, spechars))
+
+	print "\r\n[+] Now combining kiddy person..."
 
 	komb3 = list(komb(kombinaak, kbdss))
 	komb311 = list(komb(kombinaak, bdss))
@@ -499,8 +505,9 @@ elif sys.argv[1] == '-i':
 	komb314 = list(komb(komb311, spechars))
 	komb315 = list(komb(komb312, spechars))
 
-	komb4 = list(komb(kombinaa, years))
+	print "\r\n[+] Now combining pet'n stuff..."
 	
+	komb4 = list(komb(kombinaa, years))
 	komb5 = list(komb(kombinaaac, years))
 	komb511 = list(komb(kombinaaac, bdss))
 	komb512 = list(komb(kombinaaac, wbdss))
@@ -512,6 +519,8 @@ elif sys.argv[1] == '-i':
 	
 	komb6 = list(komb(kombinaaw, years))
 	komb7 = list(komb(kombinaak, years))
+	
+	print "\r\n[+] Now combining words..."
 
 	komb8 = list(komb(word, bdss))
 	komb9 = list(komb(word, wbdss))
@@ -523,13 +532,17 @@ elif sys.argv[1] == '-i':
 	komb15 = ['']
 	komb16 = ['']
 	komb21 = ['']
+	
 	if randnum == "y":
+		print "\r\n[+] Now combining with rand numbers..."
 		komb12 = list(concats(word, numfrom, numto))
 		komb13 = list(concats(kombinaa, numfrom, numto))
 		komb14 = list(concats(kombinaaac, numfrom, numto))
 		komb15 = list(concats(kombinaaw, numfrom, numto))
 		komb16 = list(concats(kombinaak, numfrom, numto))
 		komb21 = list(concats(reverse, numfrom, numto))
+		
+	print "\r\n[+] Now combining reversed stuff..."
 	komb17 = list(komb(reverse, years))
 	komb18 = list(komb(rev_w, wbdss))
 	komb19 = list(komb(rev_k, kbdss))
@@ -541,6 +554,7 @@ elif sys.argv[1] == '-i':
 	komb005 = ['']
 	komb006 = ['']
 	if spechars1 == "y":
+		print "\r\n[+] Now combining with special chars..."
 		komb001 = list(komb(kombinaa, spechars))
 		komb002 = list(komb(kombinaaac, spechars))
 		komb003 = list(komb(kombinaaw , spechars))
