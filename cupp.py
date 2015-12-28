@@ -513,7 +513,7 @@ elif sys.argv[1] == '-i':
 		komb005 = list(komb(word, spechars))
 		komb006 = list(komb(reverse, spechars))
 	
-	print "[+] Sorting list and removing duplicates..."
+	print "[+] Sorting list and removing duplicates, stay a while and listen..."
 	
 	komb_unique1 = dict.fromkeys(komb1).keys()
 	komb_unique111 = dict.fromkeys(komb111).keys()
