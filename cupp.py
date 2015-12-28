@@ -293,8 +293,14 @@ elif sys.argv[1] == '-i':
 			spechars.append(spec1)
 			for spec2 in chars:
 				spechars.append(spec1+spec2)
+				spechars.append(spec2+spec1)
 				for spec3 in chars:
 					spechars.append(spec1+spec2+spec3)
+					spechars.append(spec1+spec3+spec2)
+					spechars.append(spec2+spec1+spec3)
+					spechars.append(spec2+spec3+spec1)
+					spechars.append(spec3+spec1+spec2)
+					spechars.append(spec3+spec2+spec1)
 
 	randnum = raw_input("> Do you want to add some random numbers at the end of words? Y/[N]").lower()
 	leetmode = raw_input("> Leet mode? (i.e. leet = 1337) Y/[N]: ").lower()
@@ -409,9 +415,7 @@ elif sys.argv[1] == '-i':
 						wbdss.append(wbds2+wbds3+wbds1)
 						wbdss.append(wbds3+wbds1+wbds2)
 						wbdss.append(wbds3+wbds2+wbds1)
-	
-	
-	
+						
 	# and a child...
 	kbds = [kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
@@ -448,6 +452,7 @@ elif sys.argv[1] == '-i':
                 for kombina2 in kombinaac:
                         if kombinaac.index(kombina1) != kombinaac.index(kombina2) and kombinaac.index(kombina1.title()) != kombinaac.index(kombina2.title()):
                                 kombinaaac.append(kombina1+kombina2)
+                                kombinaaac.append(kombina2+kombina1)
 
 	kombinaa = []
 	for kombina1 in kombina:
@@ -455,6 +460,7 @@ elif sys.argv[1] == '-i':
 		for kombina2 in kombina:
 			if kombina.index(kombina1) != kombina.index(kombina2) and kombina.index(kombina1.title()) != kombina.index(kombina2.title()):
 				kombinaa.append(kombina1+kombina2)
+				kombinaa.append(kombina2+kombina1)
 
 	kombinaaw = []
 	for kombina1 in kombinaw:
@@ -462,16 +468,16 @@ elif sys.argv[1] == '-i':
 		for kombina2 in kombinaw:
 			if kombinaw.index(kombina1) != kombinaw.index(kombina2) and kombinaw.index(kombina1.title()) != kombinaw.index(kombina2.title()):
 				kombinaaw.append(kombina1+kombina2)
-	
+				kombinaaw.append(kombina2+kombina1)
+				
 	kombinaak = []
 	for kombina1 in kombinak:
 		kombinaak.append(kombina1)
 		for kombina2 in kombinak:
 			if kombinak.index(kombina1) != kombinak.index(kombina2) and kombinak.index(kombina1.title()) != kombinak.index(kombina2.title()):
 				kombinaak.append(kombina1+kombina2)
-	
-	
-	
+				kombinaak.append(kombina2+kombina1)
+				
 	komb1 = list(komb(kombinaa, bdss))
 	komb111 = list(komb(kombinaa, wbdss))
 	komb112 = list(komb(kombinaa, kbdss))
