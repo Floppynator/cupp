@@ -481,14 +481,22 @@ elif sys.argv[1] == '-i':
 	komb1 = list(komb(kombinaa, bdss))
 	komb111 = list(komb(kombinaa, wbdss))
 	komb112 = list(komb(kombinaa, kbdss))
+	komb113 = list(komb(komb1, spechars))
+	komb114 = list(komb(komb111, spechars))
+	komb115 = list(komb(komb112, spechars))
+	komb116 = list(komb(komb113, spechars))
 
 	komb2 = list(komb(kombinaaw, wbdss))
 	komb211 = list(komb(kombinaaw, bdss))
 	komb212 = list(komb(kombinaaw, kbdss))
+	komb213 = list(komb(komb2, kbdss))
+	komb214 = list(komb(komb211, kbdss))
+	komb215 = list(komb(komb212, kbdss))
+	komb216 = list(komb(komb213, kbdss))
 
 	komb3 = list(komb(kombinaak, kbdss))
 	komb311 = list(komb(kombinaak, bdss))
-	komb312 = list(komb(kombinaak, wbdss))	
+	komb312 = list(komb(kombinaak, wbdss))
 
 	komb511 = list(komb(kombinaaac, bdss))
 	komb512 = list(komb(kombinaaac, wbdss))
