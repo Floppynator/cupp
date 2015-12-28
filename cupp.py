@@ -49,6 +49,7 @@ config.read('cupp.cfg')
 years = config.get('years', 'years').split(',')
 
 chars = config.get('specialchars', 'chars').split(',')
+dateseparators = config.get('specialchars', 'dateseparators').split(',')
 
 numfrom = config.getint('nums','from')
 numto = config.getint('nums','to')
@@ -365,7 +366,7 @@ elif sys.argv[1] == '-i':
 	bds = [birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm]
 	
 	# add dateseparator combinations
-	for ds in chars:
+	for ds in dateseparators:
 		bds.append(ds)
 		
 	bdss = []
@@ -383,7 +384,7 @@ elif sys.argv[1] == '-i':
 	wbds = [wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm]
 	
 	 # add dateseparator combinations
-        for ds in chars:
+        for ds in dateseparators:
                wbds.append(ds)
 
 	wbdss = []
@@ -403,7 +404,7 @@ elif sys.argv[1] == '-i':
 	kbds = [kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
 	# add dateseparator combinations
-        for ds in chars:
+        for ds in dateseparators:
                 kbds.append(ds)
 
 	kbdss = []
