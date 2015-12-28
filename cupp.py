@@ -478,6 +478,9 @@ elif sys.argv[1] == '-i':
 				kombinaak.append(kombina1+kombina2)
 				kombinaak.append(kombina2+kombina1)
 		
+	print kombinaak
+	exit()
+	
 	print "\r\n[+] Now combining main person..."
 	
 	komb1 = list(komb(kombinaa, bdss))
