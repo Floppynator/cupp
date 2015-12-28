@@ -483,27 +483,18 @@ elif sys.argv[1] == '-i':
 	komb1 = list(komb(kombinaa, bdss))
 	komb111 = list(komb(kombinaa, wbdss))
 	komb112 = list(komb(kombinaa, kbdss))
-	komb113 = list(komb(komb1, spechars))
-	komb114 = list(komb(komb111, spechars))
-	komb115 = list(komb(komb112, spechars))
 
 	print "\r\n[+] Now combining 2nd person..."
 	
 	komb2 = list(komb(kombinaaw, wbdss))
 	komb211 = list(komb(kombinaaw, bdss))
 	komb212 = list(komb(kombinaaw, kbdss))
-	komb213 = list(komb(komb2, kbdss))
-	komb214 = list(komb(komb211, spechars))
-	komb215 = list(komb(komb212, spechars))
 
 	print "\r\n[+] Now combining kiddy person..."
 
 	komb3 = list(komb(kombinaak, kbdss))
 	komb311 = list(komb(kombinaak, bdss))
 	komb312 = list(komb(kombinaak, wbdss))
-	komb313 = list(komb(komb3, spechars))
-	komb314 = list(komb(komb311, spechars))
-	komb315 = list(komb(komb312, spechars))
 
 	print "\r\n[+] Now combining pet'n stuff..."
 	
@@ -512,10 +503,6 @@ elif sys.argv[1] == '-i':
 	komb511 = list(komb(kombinaaac, bdss))
 	komb512 = list(komb(kombinaaac, wbdss))
 	komb513 = list(komb(kombinaaac, kbdss))
-	komb514 = list(komb(komb5, spechars))
-	komb515 = list(komb(komb511, spechars))
-	komb516 = list(komb(komb512, spechars))
-	komb517 = list(komb(komb513, spechars))
 	
 	komb6 = list(komb(kombinaaw, years))
 	komb7 = list(komb(kombinaak, years))
@@ -567,16 +554,10 @@ elif sys.argv[1] == '-i':
 	komb_unique1 = dict.fromkeys(komb1).keys()
 	komb_unique111 = dict.fromkeys(komb111).keys()
 	komb_unique112 = dict.fromkeys(komb112).keys()
-	komb_unique113 = dict.fromkeys(komb113).keys()
-	komb_unique114 = dict.fromkeys(komb114).keys()
-	komb_unique115 = dict.fromkeys(komb115).keys()
 
 	komb_unique2 = dict.fromkeys(komb2).keys()
 	komb_unique211 = dict.fromkeys(komb211).keys()
 	komb_unique212 = dict.fromkeys(komb212).keys()
-	komb_unique213 = dict.fromkeys(komb213).keys()
-	komb_unique214 = dict.fromkeys(komb214).keys()
-	komb_unique215 = dict.fromkeys(komb215).keys()
 
 	komb_unique3 = dict.fromkeys(komb3).keys()
 	komb_unique311 = dict.fromkeys(komb311).keys()
@@ -587,10 +568,6 @@ elif sys.argv[1] == '-i':
 	komb_unique511 = dict.fromkeys(komb511).keys()
 	komb_unique512 = dict.fromkeys(komb512).keys()
 	komb_unique513 = dict.fromkeys(komb513).keys()
-	komb_unique514 = dict.fromkeys(komb514).keys()
-	komb_unique515 = dict.fromkeys(komb515).keys()
-	komb_unique516 = dict.fromkeys(komb516).keys()
-	komb_unique517 = dict.fromkeys(komb517).keys()
 
 	komb_unique6 = dict.fromkeys(komb6).keys()
 	komb_unique7 = dict.fromkeys(komb7).keys()
@@ -620,7 +597,7 @@ elif sys.argv[1] == '-i':
 	komb_unique011 = dict.fromkeys(komb005).keys()
 	komb_unique012 = dict.fromkeys(komb006).keys()
 	
-	uniqlist = bdss+wbdss+kbdss+reverse+komb_unique01+komb_unique02+komb_unique03+komb_unique04+komb_unique05+komb_unique1+komb_unique111+komb_unique112+komb_unique113+komb_unique114+komb_unique115+komb_unique2+komb_unique211+komb_unique212+komb_unique213+komb_unique214+komb_unique215+komb_unique3+komb_unique4+komb_unique5+komb_unique511+komb_unique512+komb_unique513+komb_unique514+komb_unique515+komb_unique516+komb_unique517+komb_unique6+komb_unique7+komb_unique8+komb_unique9+komb_unique10+komb_unique11+komb_unique12+komb_unique13+komb_unique14+komb_unique15+komb_unique16+komb_unique17+komb_unique18+komb_unique19+komb_unique20+komb_unique21+komb_unique07+komb_unique08+komb_unique09+komb_unique010+komb_unique011+komb_unique012
+	uniqlist = bdss+wbdss+kbdss+reverse+komb_unique01+komb_unique02+komb_unique03+komb_unique04+komb_unique05+komb_unique1+komb_unique111+komb_unique112+komb_unique2+komb_unique211+komb_unique212+komb_unique3+komb_unique4+komb_unique5+komb_unique511+komb_unique512+komb_unique513+komb_unique6+komb_unique7+komb_unique8+komb_unique9+komb_unique10+komb_unique11+komb_unique12+komb_unique13+komb_unique14+komb_unique15+komb_unique16+komb_unique17+komb_unique18+komb_unique19+komb_unique20+komb_unique21+komb_unique07+komb_unique08+komb_unique09+komb_unique010+komb_unique011+komb_unique012
 	
 	unique_lista = dict.fromkeys(uniqlist).keys()
 	unique_leet = []
