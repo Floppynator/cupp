@@ -49,7 +49,6 @@ config.read('cupp.cfg')
 years = config.get('years', 'years').split(',')
 
 chars = config.get('specialchars', 'chars').split(',')
-dateseparators = config.get('specialchars', 'dateseparators').split(',')
 
 numfrom = config.getint('nums','from')
 numto = config.getint('nums','to')
