@@ -36,7 +36,6 @@
 
 import sys
 import os
-import ftplib
 import ConfigParser
 import urllib
 import gzip
@@ -48,7 +47,9 @@ config = ConfigParser.ConfigParser()
 config.read('cupp.cfg')
 
 years = config.get('years', 'years').split(',')
+
 chars = config.get('specialchars', 'chars').split(',')
+dateseparators = config.get('specialchars', 'dateseparators').split(',')
 
 numfrom = config.getint('nums','from')
 numto = config.getint('nums','to')
@@ -363,6 +364,10 @@ elif sys.argv[1] == '-i':
 	# Birthdays combinations
 	bds = [birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm]
 	
+	# add dateseparator combinations
+	for ds in dateseparators:
+		bds.append(ds)
+		
 	bdss = []
 	
 	for bds1 in bds:
@@ -377,6 +382,10 @@ elif sys.argv[1] == '-i':
 	# For a woman...
 	wbds = [wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm]
 	
+	 # add dateseparator combinations
+        for ds in dateseparators:
+               wbds.append(ds)
+
 	wbdss = []
 	
 	for wbds1 in wbds:
@@ -393,6 +402,10 @@ elif sys.argv[1] == '-i':
 	# and a child...
 	kbds = [kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
+	# add dateseparator combinations
+        for ds in dateseparators:
+                kbds.append(ds)
+
 	kbdss = []
 	
 	for kbds1 in kbds:
@@ -405,10 +418,10 @@ elif sys.argv[1] == '-i':
 						kbdss.append(kbds1+kbds2+kbds3)
 	
 	# string combinations....
-	kombinaac = [pet, petup, company, companyup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
+	kombinaac = [pet, petup, company, companyup]
 	
 	kombina = [name, surname, nick, nameup, surnameup, nickup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
-	
+
 	kombinaw = [wife, wifen, wifeup, wifenup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
 	
 	kombinak = [kid, kidn, kidup, kidnup, surname, surnameup, birthdate_yy, birthdate_yyy, birthdate_yyyy, birthdate_xd, birthdate_xm, birthdate_dd, birthdate_mm, wifeb_yy, wifeb_yyy, wifeb_yyyy, wifeb_xd, wifeb_xm, wifeb_dd, wifeb_mm, kidb_yy, kidb_yyy, kidb_yyyy, kidb_xd, kidb_xm, kidb_dd, kidb_mm]
@@ -419,7 +432,7 @@ elif sys.argv[1] == '-i':
                 for kombina2 in kombinaac:
                         if kombinaac.index(kombina1) != kombinaac.index(kombina2) and kombinaac.index(kombina1.title()) != kombinaac.index(kombina2.title()):
                                 kombinaaac.append(kombina1+kombina2)
-	
+
 	kombinaa = []
 	for kombina1 in kombina:
 		kombinaa.append(kombina1)
