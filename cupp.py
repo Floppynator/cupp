@@ -143,6 +143,7 @@ elif sys.argv[1] == '-w':
 	if conts == "y" and linije > threshold:
 		print "\r\n[-] Maximum number of words for concatenation is "+str(threshold)
 		print "[-] Check configuration file for increasing this number.\r\n"
+		print "Info: You try to add "+str(linije)+" lines\r\n"
 		conts = raw_input("> Do you want to concatenate all words from wordlist? Y/[N]: ").lower()
 	conts = conts
 	cont = ['']
